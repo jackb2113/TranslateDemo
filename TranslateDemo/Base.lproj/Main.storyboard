@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translate to Spanish-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController storyboardIdentifier="SpanishViewController" id="9pv-A4-QxB" customClass="SpanishViewController" customModule="TranslateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6M-5S-5Vc">
+                                <rect key="frame" x="226" y="504" width="148" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="Nxp-Qx-nvo"/>
+                                    <constraint firstAttribute="height" constant="30" id="lyf-rm-XOk"/>
+                                </constraints>
+                                <state key="normal" title="Paste From Clipboard"/>
+                                <connections>
+                                    <action selector="copyFromClipboard:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sIs-qQ-wJH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Text in English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9j-Gp-gwp">
+                                <rect key="frame" x="20" y="69" width="184" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="UKM-N0-wuA"/>
+                                    <constraint firstAttribute="height" constant="21" id="fRW-WQ-4cH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Translated Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eni-0p-Ajv">
+                                <rect key="frame" x="20" y="305" width="560" height="199"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.53816658026493491" green="0.86666667461395264" blue="0.043290640779515797" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="translated text"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello World!" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-Gt-X0h">
+                                <rect key="frame" x="20" y="98" width="560" height="199"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.19551430913084811" green="0.86666667461395264" blue="0.6853633234757871" alpha="0.15675147804054054" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="original text"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Rhi-bP-eKS"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.89918277138157898" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jt2-Gt-X0h" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="0qx-0j-OuK"/>
+                            <constraint firstItem="Z6M-5S-5Vc" firstAttribute="top" secondItem="eni-0p-Ajv" secondAttribute="bottom" id="5fB-Lp-OWE"/>
+                            <constraint firstItem="eni-0p-Ajv" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="76j-zp-eOn"/>
+                            <constraint firstItem="Z6M-5S-5Vc" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="EFv-jM-y0A"/>
+                            <constraint firstItem="Jt2-Gt-X0h" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="F8X-Ew-bL4"/>
+                            <constraint firstItem="eni-0p-Ajv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="S7N-ZO-5ZF"/>
+                            <constraint firstItem="Jt2-Gt-X0h" firstAttribute="top" secondItem="w9j-Gp-gwp" secondAttribute="bottom" constant="8" id="bdN-LW-i3x"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Z6M-5S-5Vc" secondAttribute="bottom" constant="22" id="cwi-hT-1SM"/>
+                            <constraint firstItem="w9j-Gp-gwp" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="5" id="jgj-IB-JU9"/>
+                            <constraint firstItem="eni-0p-Ajv" firstAttribute="top" secondItem="Jt2-Gt-X0h" secondAttribute="bottom" constant="8" id="ruG-4C-UtT"/>
+                            <constraint firstItem="eni-0p-Ajv" firstAttribute="height" secondItem="Jt2-Gt-X0h" secondAttribute="height" id="v30-vD-Xwa"/>
+                            <constraint firstItem="w9j-Gp-gwp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="wuN-hv-deB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Spanish" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Translate to Spanish" id="zGw-K1-Y1q">
+                        <barButtonItem key="rightBarButtonItem" title="Translate" id="xtN-OV-aVw">
+                            <connections>
+                                <action selector="translateSelected:" destination="9pv-A4-QxB" id="Pn8-aG-D11"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="layoutPadding" destination="ruG-4C-UtT" id="min-tf-Ihk"/>
+                        <outlet property="targetTextField" destination="eni-0p-Ajv" id="Vzd-xt-xQQ"/>
+                        <outlet property="translateTextField" destination="Jt2-Gt-X0h" id="RyT-hS-p9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-371"/>
+        </scene>
+        <!--Traducir a Ingles -->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController storyboardIdentifier="EnglishViewController" id="8rJ-Kc-sve" customClass="EnglishViewController" customModule="TranslateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="¡Hola Mundo!" translatesAutoresizingMaskIntoConstraints="NO" id="x4q-gm-8ZF">
+                                <rect key="frame" x="20" y="98" width="560" height="197"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.5381665825843811" green="0.86666667461395264" blue="0.043290641158819199" alpha="0.15176309645175934" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="original text"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="2La-mC-1Fk"/>
+                                </connections>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Translated Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8yI-zd-RaK">
+                                <rect key="frame" x="20" y="303" width="560" height="197"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.19551430642604828" green="0.86666667461395264" blue="0.68536335229873657" alpha="0.15675148367881775" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="translated text"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marca Texto en Español" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-gk-VYa">
+                                <rect key="frame" x="20" y="69" width="189" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wp0-fw-i1V"/>
+                                    <constraint firstAttribute="width" constant="189" id="xHg-5b-9Kf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-Du-fdb">
+                                <rect key="frame" x="202" y="504" width="197" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="2Fe-iF-Yxs"/>
+                                    <constraint firstAttribute="height" constant="30" id="CdG-se-YFR"/>
+                                </constraints>
+                                <state key="normal">
+                                    <string key="title">Pegar desde el portapapeles
+</string>
+                                </state>
+                                <connections>
+                                    <action selector="copyFromClipboard:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CjR-nU-mfX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.89918277140000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SwS-Du-fdb" firstAttribute="top" secondItem="8yI-zd-RaK" secondAttribute="bottom" constant="4" id="2jy-Cy-d1I"/>
+                            <constraint firstItem="8yI-zd-RaK" firstAttribute="top" secondItem="x4q-gm-8ZF" secondAttribute="bottom" constant="8" id="4bc-S9-zjk"/>
+                            <constraint firstItem="8yI-zd-RaK" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="9uR-VQ-JFv"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="SwS-Du-fdb" secondAttribute="bottom" constant="22" id="D5w-6b-k3J"/>
+                            <constraint firstItem="x4q-gm-8ZF" firstAttribute="top" secondItem="CCw-gk-VYa" secondAttribute="bottom" constant="8" id="Fs9-pd-wJC"/>
+                            <constraint firstItem="8yI-zd-RaK" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="IdY-Di-Amq"/>
+                            <constraint firstItem="SwS-Du-fdb" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="NTn-8h-YgW"/>
+                            <constraint firstItem="x4q-gm-8ZF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="cV8-eH-3YG"/>
+                            <constraint firstItem="CCw-gk-VYa" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="cXW-Sk-aGv"/>
+                            <constraint firstItem="8yI-zd-RaK" firstAttribute="height" secondItem="x4q-gm-8ZF" secondAttribute="height" id="jhY-1B-4pn"/>
+                            <constraint firstItem="CCw-gk-VYa" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="5" id="oqy-CS-CBJ"/>
+                            <constraint firstItem="x4q-gm-8ZF" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="qbu-tp-9VC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ingles" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="peb-Yp-khJ">
+                        <string key="title">Traducir a Ingles
+</string>
+                        <barButtonItem key="rightBarButtonItem" title="Traducir" id="FnE-70-55v">
+                            <connections>
+                                <action selector="translateSelected:" destination="8rJ-Kc-sve" id="yXO-uc-JxC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="targetTextField" destination="8yI-zd-RaK" id="J4q-rr-cR2"/>
+                        <outlet property="translateTextField" destination="x4q-gm-8ZF" id="TrM-rv-qJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Lw-F2-6DS"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DcQ-Oq-YXD" kind="relationship" relationship="viewControllers" id="LAd-HF-p48"/>
+                        <segue destination="uaN-U6-1yC" kind="relationship" relationship="viewControllers" id="BCH-Il-41l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1465" y="-65"/>
+        </scene>
+        <!--Spanish-->
+        <scene sceneID="5vM-fm-m77">
+            <objects>
+                <navigationController id="DcQ-Oq-YXD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Spanish" image="first" selectedImage="first" id="Bvg-53-Nfx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z4b-qv-Pfb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="g6f-sm-ifD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4L-KT-GL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="-371"/>
+        </scene>
+        <!--Ingles-->
+        <scene sceneID="gN9-pR-RYu">
+            <objects>
+                <navigationController id="uaN-U6-1yC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ingles" image="second" selectedImage="second" id="2S6-JQ-8pJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NOg-Jo-HD1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="EIe-70-BIp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2MG-bL-hut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="360"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
